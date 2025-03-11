@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Papelería</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+ 
+</head>
+<body>
+  <div class="container">
+    <h1>Tienda de Papelería "AARON</h1>
+
+    <!-- FILTROS -->
+    <h2>Filtrar Productos</h2>
+    <!-- Se eliminó el filtro por categoría -->
+    <!-- Campo de búsqueda con icono (🔍) -->
+    <label for="searchInput" style="margin-left: 10px;">Buscar:</label>
+    <input type="text" id="searchInput" placeholder="Buscar producto..." onkeyup="searchProducts()" style="vertical-align: middle;">
+    <button onclick="searchProducts()" style="vertical-align: middle;">🔍</button>
+
+    <h2>Productos</h2>
+    <div class="products">
+        <div class="product" data-id="1" data-name="CINTA SCOCH GRUESA" data-price="6.0" data-category="Utiles">
+            <!--<img src="/img/default.jpg" alt="CINTA SCOCH GRUESA">-->
+            <h3>CINTA SCOCH GRUESA</h3>
+            <p>Precio: S/6.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-1">
+            <button onclick="addToCart(180, 'CINTA SCOCH GRUESA', 6.0, document.getElementById('qty-1').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="1" data-name="CUADERNO JUSTUS" data-price="4.5" data-category="Utiles">
+            <!--<img src="/img/default.jpg" alt="CUADERNO JUSTUS">-->
+            <h3>CUADERNO JUSTUS</h3>
+            <p>Precio: S/4.50</p>
+            <input class="input" type="number" value="1" min="1" id="qty-1">
+            <button onclick="addToCart(1, 'CUADERNO JUSTUS', 4.5, document.getElementById('qty-1').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="2" data-name="CUADERNO ALPHA" data-price="6.5" data-category="Utiles">
+            <!--<img src="/img/default.jpg" alt="CUADERNO ALPHA">-->
+            <h3>CUADERNO ALPHA</h3>
+            <p>Precio: S/6.50</p>
+            <input class="input" type="number" value="1" min="1" id="qty-2">
+            <button onclick="addToCart(2, 'CUADERNO ALPHA', 6.5, document.getElementById('qty-2').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="3" data-name="CUADERNO STANDFORD " data-price="7.0" data-category="Utiles">
+            <!--<img src="/img/default.jpg" alt="CUADERNO STANDFORD ">-->
+            <h3>CUADERNO STANDFORD </h3>
+            <p>Precio: S/7.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-3">
+            <button onclick="addToCart(3, 'CUADERNO STANDFORD ', 7.0, document.getElementById('qty-3').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="4" data-name="CUADERNO ANILLADO GRANDE" data-price="25.0" data-category="Utiles">
+            <!--<img src="/img/default.jpg" alt="CUADERNO ANILLADO GRANDE">-->
+            <h3>CUADERNO ANILLADO GRANDE</h3>
+            <p>Precio: S/25.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-4">
+            <button onclick="addToCart(4, 'CUADERNO ANILLADO GRANDE', 25.0, document.getElementById('qty-4').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="5" data-name="CUADERNO ANILLADO MEDIANO" data-price="15.0" data-category="Utiles">
+            <!--<img src="/img/default.jpg" alt="CUADERNO ANILLADO MEDIANO">-->
+            <h3>CUADERNO ANILLADO MEDIANO</h3>
+            <p>Precio: S/15.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-5">
+            <button onclick="addToCart(5, 'CUADERNO ANILLADO MEDIANO', 15.0, document.getElementById('qty-5').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="6" data-name="CUADERNO ANILLADO PEQUEÑO" data-price="10.0" data-category="Utiles">
+            <!--<img src="/img/default.jpg" alt="CUADERNO ANILLADO PEQUEÑO">-->
+            <h3>CUADERNO ANILLADO PEQUEÑO</h3>
+            <p>Precio: S/10.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-6">
+            <button onclick="addToCart(6, 'CUADERNO ANILLADO PEQUEÑO', 10.0, document.getElementById('qty-6').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="7" data-name="DICCIONARIO SINÓNIMO ANTÓNIMO" data-price="35.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="DICCIONARIO SINÓNIMO ANTÓNIMO">-->
+            <h3>DICCIONARIO SINÓNIMO ANTÓNIMO</h3>
+            <p>Precio: S/35.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-7">
+            <button onclick="addToCart(7, 'DICCIONARIO SINÓNIMO ANTÓNIMO', 35.0, document.getElementById('qty-7').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="8" data-name="DICCIONARIO SINÓNIMO ANTÓNIMO TAPA DURA" data-price="45.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="DICCIONARIO SINÓNIMO ANTÓNIMO TAPA DURA">-->
+            <h3>DICCIONARIO SINÓNIMO ANTÓNIMO TAPA DURA</h3>
+            <p>Precio: S/45.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-8">
+            <button onclick="addToCart(8, 'DICCIONARIO SINÓNIMO ANTÓNIMO TAPA DURA', 45.0, document.getElementById('qty-8').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="9" data-name="DICCIONARIO INGLES TAPA GRUESA" data-price="45.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="DICCIONARIO INGLES TAPA GRUESA">-->
+            <h3>DICCIONARIO INGLES TAPA GRUESA</h3>
+            <p>Precio: S/45.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-9">
+            <button onclick="addToCart(9, 'DICCIONARIO INGLES TAPA GRUESA', 45.0, document.getElementById('qty-9').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="10" data-name="DICCIONARIO ESPAÑOL GRANDE" data-price="35.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="DICCIONARIO ESPAÑOL GRANDE">-->
+            <h3>DICCIONARIO ESPAÑOL GRANDE</h3>
+            <p>Precio: S/35.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-10">
+            <button onclick="addToCart(10, 'DICCIONARIO ESPAÑOL GRANDE', 35.0, document.getElementById('qty-10').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="11" data-name="COQUITO PEQUEÑO" data-price="15.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="COQUITO PEQUEÑO">-->
+            <h3>COQUITO PEQUEÑO</h3>
+            <p>Precio: S/15.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-11">
+            <button onclick="addToCart(11, 'COQUITO PEQUEÑO', 15.0, document.getElementById('qty-11').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="12" data-name="PALMER" data-price="6.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="PALMER">-->
+            <h3>PALMER</h3>
+            <p>Precio: S/6.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-12">
+            <button onclick="addToCart(12, 'PALMER', 6.0, document.getElementById('qty-12').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="13" data-name="PERÚ CUENTOS" data-price="18.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="PERÚ CUENTOS">-->
+            <h3>PERÚ CUENTOS</h3>
+            <p>Precio: S/18.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-13">
+            <button onclick="addToCart(13, 'PERÚ CUENTOS', 18.0, document.getElementById('qty-13').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="14" data-name="OTTO VALLADARES" data-price="25.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="OTTO VALLADARES">-->
+            <h3>OTTO VALLADARES</h3>
+            <p>Precio: S/25.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-14">
+            <button onclick="addToCart(14, 'OTTO VALLADARES', 25.0, document.getElementById('qty-14').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="15" data-name="SCKETCH BOOK" data-price="7.0" data-category="Utiles">
+            <!--<img src="/img/default.jpg" alt="SCKETCH BOOK">-->
+            <h3>SCKETCH BOOK</h3>
+            <p>Precio: S/7.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-15">
+            <button onclick="addToCart(15, 'SCKETCH BOOK', 7.0, document.getElementById('qty-15').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="16" data-name="BLOQ ARCOIRIS" data-price="7.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="BLOQ ARCOIRIS">-->
+            <h3>BLOQ ARCOIRIS</h3>
+            <p>Precio: S/7.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-16">
+            <button onclick="addToCart(16, 'BLOQ ARCOIRIS', 7.0, document.getElementById('qty-16').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="17" data-name="HOJA DE COLORES X50" data-price="5.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="HOJA DE COLORES X50">-->
+            <h3>HOJA DE COLORES X50</h3>
+            <p>Precio: S/5.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-17">
+            <button onclick="addToCart(17, 'HOJA DE COLORES X50', 5.0, document.getElementById('qty-17').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="18" data-name="PAPEL BOOM X50" data-price="4.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="PAPEL BOOM X50">-->
+            <h3>PAPEL BOOM X50</h3>
+            <p>Precio: S/4.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-18">
+            <button onclick="addToCart(18, 'PAPEL BOOM X50', 4.0, document.getElementById('qty-18').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="19" data-name="FOLDER" data-price="5.0" data-category="Utiles">
+            <!--<img src="/img/default.jpg" alt="FOLDER">-->
+            <h3>FOLDER</h3>
+            <p>Precio: S/5.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-19">
+            <button onclick="addToCart(19, 'FOLDER', 5.0, document.getElementById('qty-19').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="20" data-name="TABLA PERIÓDICA" data-price="5.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="TABLA PERIÓDICA">-->
+            <h3>TABLA PERIÓDICA</h3>
+            <p>Precio: S/5.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-20">
+            <button onclick="addToCart(20, 'TABLA PERIÓDICA', 5.0, document.getElementById('qty-20').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="21" data-name="TABLA DE MULTIPLICACIÑN" data-price="5.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="TABLA DE MULTIPLICACIÑN">-->
+            <h3>TABLA DE MULTIPLICACIÑN</h3>
+            <p>Precio: S/5.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-21">
+            <button onclick="addToCart(21, 'TABLA DE MULTIPLICACIÑN', 5.0, document.getElementById('qty-21').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="22" data-name="OBRAS" data-price="3.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="OBRAS">-->
+            <h3>OBRAS</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-22">
+            <button onclick="addToCart(22, 'OBRAS', 3.0, document.getElementById('qty-22').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="23" data-name="CALENDARIO CIVICO ESCOLAR" data-price="12.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="CALENDARIO CIVICO ESCOLAR">-->
+            <h3>CALENDARIO CIVICO ESCOLAR</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-23">
+            <button onclick="addToCart(23, 'CALENDARIO CIVICO ESCOLAR', 12.0, document.getElementById('qty-23').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="24" data-name="CONSTITUCION POLITICA DEL PERÚ" data-price="13.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="CONSTITUCION POLITICA DEL PERÚ">-->
+            <h3>CONSTITUCION POLITICA DEL PERÚ</h3>
+            <p>Precio: S/13.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-24">
+            <button onclick="addToCart(24, 'CONSTITUCION POLITICA DEL PERÚ', 13.0, document.getElementById('qty-24').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="25" data-name="PORTAFOLIO" data-price="15.0" data-category="Oficina">
+            <!--<img src="/img/default.jpg" alt="PORTAFOLIO">-->
+            <h3>PORTAFOLIO</h3>
+            <p>Precio: S/15.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-25">
+            <button onclick="addToCart(25, 'PORTAFOLIO', 15.0, document.getElementById('qty-25').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="26" data-name="ARCHIVADOR" data-price="15.0" data-category="Oficina">
+            <!--<img src="/img/default.jpg" alt="ARCHIVADOR">-->
+            <h3>ARCHIVADOR</h3>
+            <p>Precio: S/15.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-26">
+            <button onclick="addToCart(26, 'ARCHIVADOR', 15.0, document.getElementById('qty-26').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="27" data-name="BLOCK CARTULINA" data-price="13.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="BLOCK CARTULINA">-->
+            <h3>BLOCK CARTULINA</h3>
+            <p>Precio: S/13.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-27">
+            <button onclick="addToCart(27, 'BLOCK CARTULINA', 13.0, document.getElementById('qty-27').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="28" data-name="BLOCK PAPEL ART" data-price="20.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="BLOCK PAPEL ART">-->
+            <h3>BLOCK PAPEL ART</h3>
+            <p>Precio: S/20.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-28">
+            <button onclick="addToCart(28, 'BLOCK PAPEL ART', 20.0, document.getElementById('qty-28').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="29" data-name="FATASY" data-price="12.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="FATASY">-->
+            <h3>FATASY</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-29">
+            <button onclick="addToCart(29, 'FATASY', 12.0, document.getElementById('qty-29').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="30" data-name="CARTUCHERA CUERO" data-price="15.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="CARTUCHERA CUERO">-->
+            <h3>CARTUCHERA CUERO</h3>
+            <p>Precio: S/15.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-30">
+            <button onclick="addToCart(30, 'CARTUCHERA CUERO', 15.0, document.getElementById('qty-30').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="31" data-name="LAPIZ" data-price="1.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="LAPIZ">-->
+            <h3>LAPIZ</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-31">
+            <button onclick="addToCart(31, 'LAPIZ', 1.0, document.getElementById('qty-31').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="32" data-name="LAPIZ CHEQUEO" data-price="1.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="LAPIZ CHEQUEO">-->
+            <h3>LAPIZ CHEQUEO</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-32">
+            <button onclick="addToCart(32, 'LAPIZ CHEQUEO', 1.0, document.getElementById('qty-32').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="33" data-name="LAPIZ BICOLOR" data-price="1.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="LAPIZ BICOLOR">-->
+            <h3>LAPIZ BICOLOR</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-33">
+            <button onclick="addToCart(33, 'LAPIZ BICOLOR', 1.0, document.getElementById('qty-33').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="34" data-name="GOMA EN BARRA" data-price="8.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="GOMA EN BARRA">-->
+            <h3>GOMA EN BARRA</h3>
+            <p>Precio: S/8.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-34">
+            <button onclick="addToCart(34, 'GOMA EN BARRA', 8.0, document.getElementById('qty-34').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="35" data-name="TIJERA" data-price="2.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="TIJERA">-->
+            <h3>TIJERA</h3>
+            <p>Precio: S/2.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-35">
+            <button onclick="addToCart(35, 'TIJERA', 2.0, document.getElementById('qty-35').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="36" data-name="BORRADOR GRANDE NEGRO" data-price="3.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="BORRADOR GRANDE NEGRO">-->
+            <h3>BORRADOR GRANDE NEGRO</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-36">
+            <button onclick="addToCart(36, 'BORRADOR GRANDE NEGRO', 3.0, document.getElementById('qty-36').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="37" data-name="TAJADOR " data-price="3.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="TAJADOR ">-->
+            <h3>TAJADOR </h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-37">
+            <button onclick="addToCart(37, 'TAJADOR ', 3.0, document.getElementById('qty-37').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="38" data-name="JUEGO DE REGLAS" data-price="7.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="JUEGO DE REGLAS">-->
+            <h3>JUEGO DE REGLAS</h3>
+            <p>Precio: S/7.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-38">
+            <button onclick="addToCart(38, 'JUEGO DE REGLAS', 7.0, document.getElementById('qty-38').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="39" data-name="LAPICES DE COLORES X12" data-price="10.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="LAPICES DE COLORES X12">-->
+            <h3>LAPICES DE COLORES X12</h3>
+            <p>Precio: S/10.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-39">
+            <button onclick="addToCart(39, 'LAPICES DE COLORES X12', 10.0, document.getElementById('qty-39').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="40" data-name="ESTUCHE DE PLUMONES X12" data-price="12.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="ESTUCHE DE PLUMONES X12">-->
+            <h3>ESTUCHE DE PLUMONES X12</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-40">
+            <button onclick="addToCart(40, 'ESTUCHE DE PLUMONES X12', 12.0, document.getElementById('qty-40').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="41" data-name="PLUMONES DE PIZZARRA DELGADO" data-price="3.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="PLUMONES DE PIZZARRA DELGADO">-->
+            <h3>PLUMONES DE PIZZARRA DELGADO</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-41">
+            <button onclick="addToCart(41, 'PLUMONES DE PIZZARRA DELGADO', 3.0, document.getElementById('qty-41').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="42" data-name="CINTA EMBAJALE" data-price="6.0" data-category="Oficina">
+            <!--<img src="/img/default.jpg" alt="CINTA EMBAJALE">-->
+            <h3>CINTA EMBAJALE</h3>
+            <p>Precio: S/6.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-42">
+            <button onclick="addToCart(42, 'CINTA EMBAJALE', 6.0, document.getElementById('qty-42').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="43" data-name="CINTA MASKING" data-price="8.0" data-category="Oficina">
+            <!--<img src="/img/default.jpg" alt="CINTA MASKING">-->
+            <h3>CINTA MASKING</h3>
+            <p>Precio: S/8.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-43">
+            <button onclick="addToCart(43, 'CINTA MASKING', 8.0, document.getElementById('qty-43').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="44" data-name="LAPICERO" data-price="1.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="LAPICERO">-->
+            <h3>LAPICERO</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-44">
+            <button onclick="addToCart(44, 'LAPICERO', 1.0, document.getElementById('qty-44').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="45" data-name="PLUMONES DE PAPELOTE GRUESO" data-price="6.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="PLUMONES DE PAPELOTE GRUESO">-->
+            <h3>PLUMONES DE PAPELOTE GRUESO</h3>
+            <p>Precio: S/6.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-45">
+            <button onclick="addToCart(45, 'PLUMONES DE PAPELOTE GRUESO', 6.0, document.getElementById('qty-45').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="46" data-name="MICA" data-price="2.0" data-category="Oficina">
+            <!--<img src="/img/default.jpg" alt="MICA">-->
+            <h3>MICA</h3>
+            <p>Precio: S/2.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-46">
+            <button onclick="addToCart(46, 'MICA', 2.0, document.getElementById('qty-46').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="47" data-name="PLASTILINA" data-price="12.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="PLASTILINA">-->
+            <h3>PLASTILINA</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-47">
+            <button onclick="addToCart(47, 'PLASTILINA', 12.0, document.getElementById('qty-47').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="48" data-name="CRAYONES" data-price="12.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="CRAYONES">-->
+            <h3>CRAYONES</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-48">
+            <button onclick="addToCart(48, 'CRAYONES', 12.0, document.getElementById('qty-48').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="49" data-name="SILICONA LIQUIDA" data-price="10.0" data-category="Oficina">
+            <!--<img src="/img/default.jpg" alt="SILICONA LIQUIDA">-->
+            <h3>SILICONA LIQUIDA</h3>
+            <p>Precio: S/10.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-49">
+            <button onclick="addToCart(49, 'SILICONA LIQUIDA', 10.0, document.getElementById('qty-49').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="50" data-name="BARRA DE SILICONA GRUESA" data-price="2.0" data-category="Oficina">
+            <!--<img src="/img/default.jpg" alt="BARRA DE SILICONA GRUESA">-->
+            <h3>BARRA DE SILICONA GRUESA</h3>
+            <p>Precio: S/2.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-50">
+            <button onclick="addToCart(50, 'BARRA DE SILICONA GRUESA', 2.0, document.getElementById('qty-50').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="51" data-name="GOMA" data-price="10.0" data-category="Oficina">
+            <!--<img src="/img/default.jpg" alt="GOMA">-->
+            <h3>GOMA</h3>
+            <p>Precio: S/10.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-51">
+            <button onclick="addToCart(51, 'GOMA', 10.0, document.getElementById('qty-51').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="52" data-name="VASOS DESCARTABLES" data-price="5.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="VASOS DESCARTABLES">-->
+            <h3>VASOS DESCARTABLES</h3>
+            <p>Precio: S/5.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-52">
+            <button onclick="addToCart(52, 'VASOS DESCARTABLES', 5.0, document.getElementById('qty-52').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="53" data-name="PLATOS DESCARTABLES" data-price="6.0" data-category="Otros">
+            <!--<img src="/img/default.jpg" alt="PLATOS DESCARTABLES">-->
+            <h3>PLATOS DESCARTABLES</h3>
+            <p>Precio: S/6.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-53">
+            <button onclick="addToCart(53, 'PLATOS DESCARTABLES', 6.0, document.getElementById('qty-53').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="54" data-name="TEMPERA" data-price="12.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="TEMPERA">-->
+            <h3>TEMPERA</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-54">
+            <button onclick="addToCart(54, 'TEMPERA', 12.0, document.getElementById('qty-54').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="55" data-name="TEMPERA CON APLICADOR" data-price="12.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="TEMPERA CON APLICADOR">-->
+            <h3>TEMPERA CON APLICADOR</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-55">
+            <button onclick="addToCart(55, 'TEMPERA CON APLICADOR', 12.0, document.getElementById('qty-55').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="56" data-name="ESTUCHE DE PLUMONES GRUESO" data-price="35.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="ESTUCHE DE PLUMONES GRUESO">-->
+            <h3>ESTUCHE DE PLUMONES GRUESO</h3>
+            <p>Precio: S/35.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-56">
+            <button onclick="addToCart(56, 'ESTUCHE DE PLUMONES GRUESO', 35.0, document.getElementById('qty-56').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="57" data-name="LIMPIA TIPO" data-price="4.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="LIMPIA TIPO">-->
+            <h3>LIMPIA TIPO</h3>
+            <p>Precio: S/4.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-57">
+            <button onclick="addToCart(57, 'LIMPIA TIPO', 4.0, document.getElementById('qty-57').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="58" data-name="FOLDER MANILA CON FASTER" data-price="2.0" data-category="Oficina">
+            <!--<img src="/img/default.jpg" alt="FOLDER MANILA CON FASTER">-->
+            <h3>FOLDER MANILA CON FASTER</h3>
+            <p>Precio: S/2.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-58">
+            <button onclick="addToCart(58, 'FOLDER MANILA CON FASTER', 2.0, document.getElementById('qty-58').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="59" data-name="VINIFAN OFICIO" data-price="18.0" data-category="Utiles">
+            <!--<img src="/img/default.jpg" alt="VINIFAN OFICIO">-->
+            <h3>VINIFAN OFICIO</h3>
+            <p>Precio: S/18.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-59">
+            <button onclick="addToCart(59, 'VINIFAN OFICIO', 18.0, document.getElementById('qty-59').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="59" data-name="SOBRE MANILA" data-price="1.0" data-category="Oficina">
+            <!--<img src="/img/default.jpg" alt="SOBRE MANILA">-->
+            <h3>SOBRE MANILA</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-59">
+            <button onclick="addToCart(59, 'SOBRE MANILA', 1.0, document.getElementById('qty-59').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="60" data-name="FORROLISTO" data-price="1.5" data-category="Utiles">
+            <!--<img src="/img/default.jpg" alt="FORROLISTO">-->
+            <h3>FORROLISTO</h3>
+            <p>Precio: S/1.50</p>
+            <input class="input" type="number" value="1" min="1" id="qty-60">
+            <button onclick="addToCart(60, 'FORROLISTO', 1.5, document.getElementById('qty-60').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="61" data-name="MANDIL" data-price="12.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="MANDIL">-->
+            <h3>MANDIL</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-61">
+            <button onclick="addToCart(61, 'MANDIL', 12.0, document.getElementById('qty-61').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="62" data-name="COMPAS" data-price="3.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="COMPAS">-->
+            <h3>COMPAS</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-62">
+            <button onclick="addToCart(62, 'COMPAS', 3.0, document.getElementById('qty-62').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="63" data-name="CORRECTOR " data-price="5.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="CORRECTOR ">-->
+            <h3>CORRECTOR </h3>
+            <p>Precio: S/5.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-63">
+            <button onclick="addToCart(63, 'CORRECTOR ', 5.0, document.getElementById('qty-63').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="64" data-name="RESALTADOR" data-price="3.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="RESALTADOR">-->
+            <h3>RESALTADOR</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-64">
+            <button onclick="addToCart(64, 'RESALTADOR', 3.0, document.getElementById('qty-64').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="65" data-name="PAPELOTES" data-price="1.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="PAPELOTES">-->
+            <h3>PAPELOTES</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-65">
+            <button onclick="addToCart(65, 'PAPELOTES', 1.0, document.getElementById('qty-65').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="66" data-name="PAPEL LUSTRE" data-price="1.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="PAPEL LUSTRE">-->
+            <h3>PAPEL LUSTRE</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-66">
+            <button onclick="addToCart(66, 'PAPEL LUSTRE', 1.0, document.getElementById('qty-66').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="67" data-name="PAPEL GREPE" data-price="3.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="PAPEL GREPE">-->
+            <h3>PAPEL GREPE</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-67">
+            <button onclick="addToCart(67, 'PAPEL GREPE', 3.0, document.getElementById('qty-67').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="68" data-name="CARTULINA " data-price="1.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="CARTULINA ">-->
+            <h3>CARTULINA </h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-68">
+            <button onclick="addToCart(68, 'CARTULINA ', 1.0, document.getElementById('qty-68').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="69" data-name="CARTON CARTULINA" data-price="3.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="CARTON CARTULINA">-->
+            <h3>CARTON CARTULINA</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-69">
+            <button onclick="addToCart(69, 'CARTON CARTULINA', 3.0, document.getElementById('qty-69').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="70" data-name="CARTULINA CORRUGADA" data-price="3.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="CARTULINA CORRUGADA">-->
+            <h3>CARTULINA CORRUGADA</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-70">
+            <button onclick="addToCart(70, 'CARTULINA CORRUGADA', 3.0, document.getElementById('qty-70').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="71" data-name="CARTULINA PLASTIFICADA" data-price="3.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="CARTULINA PLASTIFICADA">-->
+            <h3>CARTULINA PLASTIFICADA</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-71">
+            <button onclick="addToCart(71, 'CARTULINA PLASTIFICADA', 3.0, document.getElementById('qty-71').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="72" data-name="CARTULINA ECOLOGICA" data-price="3.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="CARTULINA ECOLOGICA">-->
+            <h3>CARTULINA ECOLOGICA</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-72">
+            <button onclick="addToCart(72, 'CARTULINA ECOLOGICA', 3.0, document.getElementById('qty-72').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="73" data-name="PAPEL COMETA" data-price="1.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="PAPEL COMETA">-->
+            <h3>PAPEL COMETA</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-73">
+            <button onclick="addToCart(73, 'PAPEL COMETA', 1.0, document.getElementById('qty-73').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="74" data-name="PAPEL DE REGALO" data-price="1.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="PAPEL DE REGALO">-->
+            <h3>PAPEL DE REGALO</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-74">
+            <button onclick="addToCart(74, 'PAPEL DE REGALO', 1.0, document.getElementById('qty-74').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="75" data-name="PAPEL CRAFT" data-price="1.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="PAPEL CRAFT">-->
+            <h3>PAPEL CRAFT</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-75">
+            <button onclick="addToCart(75, 'PAPEL CRAFT', 1.0, document.getElementById('qty-75').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="76" data-name="CORROSPUN" data-price="8.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="CORROSPUN">-->
+            <h3>CORROSPUN</h3>
+            <p>Precio: S/8.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-76">
+            <button onclick="addToCart(76, 'CORROSPUN', 8.0, document.getElementById('qty-76').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="77" data-name="MICROPOROSO" data-price="8.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="MICROPOROSO">-->
+            <h3>MICROPOROSO</h3>
+            <p>Precio: S/8.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-77">
+            <button onclick="addToCart(77, 'MICROPOROSO', 8.0, document.getElementById('qty-77').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="78" data-name="CORROSPUN ESCARCHADO" data-price="10.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="CORROSPUN ESCARCHADO">-->
+            <h3>CORROSPUN ESCARCHADO</h3>
+            <p>Precio: S/10.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-78">
+            <button onclick="addToCart(78, 'CORROSPUN ESCARCHADO', 10.0, document.getElementById('qty-78').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="79" data-name="MICROPOROSO CON DISEÑO" data-price="10.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="MICROPOROSO CON DISEÑO">-->
+            <h3>MICROPOROSO CON DISEÑO</h3>
+            <p>Precio: S/10.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-79">
+            <button onclick="addToCart(79, 'MICROPOROSO CON DISEÑO', 10.0, document.getElementById('qty-79').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="80" data-name="MICROPOROSO TOALLADO" data-price="12.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="MICROPOROSO TOALLADO">-->
+            <h3>MICROPOROSO TOALLADO</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-80">
+            <button onclick="addToCart(80, 'MICROPOROSO TOALLADO', 12.0, document.getElementById('qty-80').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="81" data-name="MICROPOROSO MANTA" data-price="15.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="MICROPOROSO MANTA">-->
+            <h3>MICROPOROSO MANTA</h3>
+            <p>Precio: S/15.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-81">
+            <button onclick="addToCart(81, 'MICROPOROSO MANTA', 15.0, document.getElementById('qty-81').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="82" data-name="MICROPOROSO LENTEJUELADO" data-price="12.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="MICROPOROSO LENTEJUELADO">-->
+            <h3>MICROPOROSO LENTEJUELADO</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-82">
+            <button onclick="addToCart(82, 'MICROPOROSO LENTEJUELADO', 12.0, document.getElementById('qty-82').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="83" data-name="MICROPOROSO ESCARCHADO" data-price="12.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="MICROPOROSO ESCARCHADO">-->
+            <h3>MICROPOROSO ESCARCHADO</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-83">
+            <button onclick="addToCart(83, 'MICROPOROSO ESCARCHADO', 12.0, document.getElementById('qty-83').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="84" data-name="ULA ULA" data-price="10.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="ULA ULA">-->
+            <h3>ULA ULA</h3>
+            <p>Precio: S/10.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-84">
+            <button onclick="addToCart(84, 'ULA ULA', 10.0, document.getElementById('qty-84').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="85" data-name="CHINCHES" data-price="4.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="CHINCHES">-->
+            <h3>CHINCHES</h3>
+            <p>Precio: S/4.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-85">
+            <button onclick="addToCart(85, 'CHINCHES', 4.0, document.getElementById('qty-85').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="86" data-name="GRAPAS" data-price="4.0" data-category="Oficina">
+            <!--<img src="/img/default.jpg" alt="GRAPAS">-->
+            <h3>GRAPAS</h3>
+            <p>Precio: S/4.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-86">
+            <button onclick="addToCart(86, 'GRAPAS', 4.0, document.getElementById('qty-86').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="87" data-name="TIJERA CON DISEÑO" data-price="3.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="TIJERA CON DISEÑO">-->
+            <h3>TIJERA CON DISEÑO</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-87">
+            <button onclick="addToCart(87, 'TIJERA CON DISEÑO', 3.0, document.getElementById('qty-87').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="88" data-name="LANA" data-price="2.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="LANA">-->
+            <h3>LANA</h3>
+            <p>Precio: S/2.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-88">
+            <button onclick="addToCart(88, 'LANA', 2.0, document.getElementById('qty-88').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="89" data-name="OJITOS" data-price="1.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="OJITOS">-->
+            <h3>OJITOS</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-89">
+            <button onclick="addToCart(89, 'OJITOS', 1.0, document.getElementById('qty-89').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="90" data-name="BLONDA" data-price="2.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="BLONDA">-->
+            <h3>BLONDA</h3>
+            <p>Precio: S/2.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-90">
+            <button onclick="addToCart(90, 'BLONDA', 2.0, document.getElementById('qty-90').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="91" data-name="COLA DE RATA" data-price="2.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="COLA DE RATA">-->
+            <h3>COLA DE RATA</h3>
+            <p>Precio: S/2.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-91">
+            <button onclick="addToCart(91, 'COLA DE RATA', 2.0, document.getElementById('qty-91').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="92" data-name="LAPIZ JUMPO" data-price="3.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="LAPIZ JUMPO">-->
+            <h3>LAPIZ JUMPO</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-92">
+            <button onclick="addToCart(92, 'LAPIZ JUMPO', 3.0, document.getElementById('qty-92').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="93" data-name="PINTURA JUMBO" data-price="25.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="PINTURA JUMBO">-->
+            <h3>PINTURA JUMBO</h3>
+            <p>Precio: S/25.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-93">
+            <button onclick="addToCart(93, 'PINTURA JUMBO', 25.0, document.getElementById('qty-93').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="94" data-name="TEMPERA APU" data-price="3.0" data-category="otros">
+            <!--<img src="/img/default.jpg" alt="TEMPERA APU">-->
+            <h3>TEMPERA APU</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-94">
+            <button onclick="addToCart(94, 'TEMPERA APU', 3.0, document.getElementById('qty-94').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="95" data-name="GLOBOS" data-price="15.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="GLOBOS">-->
+            <h3>GLOBOS</h3>
+            <p>Precio: S/15.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-95">
+            <button onclick="addToCart(95, 'GLOBOS', 15.0, document.getElementById('qty-95').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="96" data-name="PALIGLOBOS" data-price="0.2" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="PALIGLOBOS">-->
+            <h3>PALIGLOBOS</h3>
+            <p>Precio: S/0.20</p>
+            <input class="input" type="number" value="1" min="1" id="qty-96">
+            <button onclick="addToCart(96, 'PALIGLOBOS', 0.2, document.getElementById('qty-96').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="97" data-name="ROMPECABEZAS X50" data-price="35.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="ROMPECABEZAS X50">-->
+            <h3>ROMPECABEZAS X50</h3>
+            <p>Precio: S/35.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-97">
+            <button onclick="addToCart(97, 'ROMPECABEZAS X50', 35.0, document.getElementById('qty-97').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="98" data-name="INSTRUMENTO MUSICAL" data-price="12.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="INSTRUMENTO MUSICAL">-->
+            <h3>INSTRUMENTO MUSICAL</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-98">
+            <button onclick="addToCart(98, 'INSTRUMENTO MUSICAL', 12.0, document.getElementById('qty-98').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="99" data-name="BASE 10" data-price="18.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="BASE 10">-->
+            <h3>BASE 10</h3>
+            <p>Precio: S/18.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-99">
+            <button onclick="addToCart(99, 'BASE 10', 18.0, document.getElementById('qty-99').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="100" data-name="ABACO" data-price="15.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="ABACO">-->
+            <h3>ABACO</h3>
+            <p>Precio: S/15.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-100">
+            <button onclick="addToCart(100, 'ABACO', 15.0, document.getElementById('qty-100').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="101" data-name="BALDE PLAYGO X35" data-price="25.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="BALDE PLAYGO X35">-->
+            <h3>BALDE PLAYGO X35</h3>
+            <p>Precio: S/25.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-101">
+            <button onclick="addToCart(101, 'BALDE PLAYGO X35', 25.0, document.getElementById('qty-101').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="102" data-name="PAPEL HIGIENICO" data-price="1.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="PAPEL HIGIENICO">-->
+            <h3>PAPEL HIGIENICO</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-102">
+            <button onclick="addToCart(102, 'PAPEL HIGIENICO', 1.0, document.getElementById('qty-102').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="103" data-name="TOALLA" data-price="7.0" data-category="Aseo">
+            <!--<img src="/img/default.jpg" alt="TOALLA">-->
+            <h3>TOALLA</h3>
+            <p>Precio: S/7.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-103">
+            <button onclick="addToCart(103, 'TOALLA', 7.0, document.getElementById('qty-103').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="104" data-name="GANCHOS" data-price="4.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="GANCHOS">-->
+            <h3>GANCHOS</h3>
+            <p>Precio: S/4.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-104">
+            <button onclick="addToCart(104, 'GANCHOS', 4.0, document.getElementById('qty-104').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="105" data-name="PAPEL TOALLA" data-price="3.0" data-category="PapelerÑa">
+            <!--<img src="/img/default.jpg" alt="PAPEL TOALLA">-->
+            <h3>PAPEL TOALLA</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-105">
+            <button onclick="addToCart(105, 'PAPEL TOALLA', 3.0, document.getElementById('qty-105').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="106" data-name="PAÑOS HUMEDOS" data-price="12.0" data-category="Aseo">
+            <!--<img src="/img/default.jpg" alt="PAÑOS HUMEDOS">-->
+            <h3>PAÑOS HUMEDOS</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-106">
+            <button onclick="addToCart(106, 'PAÑOS HUMEDOS', 12.0, document.getElementById('qty-106').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="107" data-name="PAÑOS YESS" data-price="3.0" data-category="Aseo">
+            <!--<img src="/img/default.jpg" alt="PAÑOS YESS">-->
+            <h3>PAÑOS YESS</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-107">
+            <button onclick="addToCart(107, 'PAÑOS YESS', 3.0, document.getElementById('qty-107').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="108" data-name="POET" data-price="5.0" data-category="Aseo">
+            <!--<img src="/img/default.jpg" alt="POET">-->
+            <h3>POET</h3>
+            <p>Precio: S/5.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-108">
+            <button onclick="addToCart(108, 'POET', 5.0, document.getElementById('qty-108').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="109" data-name="JABON" data-price="3.0" data-category="Aseo">
+            <!--<img src="/img/default.jpg" alt="JABON">-->
+            <h3>JABON</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-109">
+            <button onclick="addToCart(109, 'JABON', 3.0, document.getElementById('qty-109').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="110" data-name="CEPILLO" data-price="2.0" data-category="Aseo">
+            <!--<img src="/img/default.jpg" alt="CEPILLO">-->
+            <h3>CEPILLO</h3>
+            <p>Precio: S/2.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-110">
+            <button onclick="addToCart(110, 'CEPILLO', 2.0, document.getElementById('qty-110').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="111" data-name="PASTA DENTAL" data-price="5.0" data-category="Aseo">
+            <!--<img src="/img/default.jpg" alt="PASTA DENTAL">-->
+            <h3>PASTA DENTAL</h3>
+            <p>Precio: S/5.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-111">
+            <button onclick="addToCart(111, 'PASTA DENTAL', 5.0, document.getElementById('qty-111').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="112" data-name="GLOBOS PENCIL" data-price="0.2" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="GLOBOS PENCIL">-->
+            <h3>GLOBOS PENCIL</h3>
+            <p>Precio: S/0.20</p>
+            <input class="input" type="number" value="1" min="1" id="qty-112">
+            <button onclick="addToCart(112, 'GLOBOS PENCIL', 0.2, document.getElementById('qty-112').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="113" data-name="PINCEL" data-price="1.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="PINCEL">-->
+            <h3>PINCEL</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-113">
+            <button onclick="addToCart(113, 'PINCEL', 1.0, document.getElementById('qty-113').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="114" data-name="PALETA DE COLOTES" data-price="3.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="PALETA DE COLOTES">-->
+            <h3>PALETA DE COLOTES</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-114">
+            <button onclick="addToCart(114, 'PALETA DE COLOTES', 3.0, document.getElementById('qty-114').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="115" data-name="TITERES" data-price="5.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="TITERES">-->
+            <h3>TITERES</h3>
+            <p>Precio: S/5.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-115">
+            <button onclick="addToCart(115, 'TITERES', 5.0, document.getElementById('qty-115').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="116" data-name="ESCARCHA" data-price="1.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="ESCARCHA">-->
+            <h3>ESCARCHA</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-116">
+            <button onclick="addToCart(116, 'ESCARCHA', 1.0, document.getElementById('qty-116').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="117" data-name="BAJA LENGUA" data-price="4.0" data-category="Material escolar">
+            <!--<img src="/img/default.jpg" alt="BAJA LENGUA">-->
+            <h3>BAJA LENGUA</h3>
+            <p>Precio: S/4.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-117">
+            <button onclick="addToCart(117, 'BAJA LENGUA', 4.0, document.getElementById('qty-117').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="118" data-name="PALITOS DE CHUPETE" data-price="2.0" data-category="DidÑctico">
+            <!--<img src="/img/default.jpg" alt="PALITOS DE CHUPETE">-->
+            <h3>PALITOS DE CHUPETE</h3>
+            <p>Precio: S/2.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-118">
+            <button onclick="addToCart(118, 'PALITOS DE CHUPETE', 2.0, document.getElementById('qty-118').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="119" data-name="CINTA SCOCH DELGADO" data-price="3.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="CINTA SCOCH DELGADO">-->
+            <h3>CINTA SCOCH DELGADO</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-119">
+            <button onclick="addToCart(119, 'CINTA SCOCH DELGADO', 3.0, document.getElementById('qty-119').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="120" data-name="FOLDER CON LICENCIA" data-price="8.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="FOLDER CON LICENCIA">-->
+            <h3>FOLDER CON LICENCIA</h3>
+            <p>Precio: S/8.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-120">
+            <button onclick="addToCart(120, 'FOLDER CON LICENCIA', 8.0, document.getElementById('qty-120').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="121" data-name="VINIFANCITO" data-price="6.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="VINIFANCITO">-->
+            <h3>VINIFANCITO</h3>
+            <p>Precio: S/6.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-121">
+            <button onclick="addToCart(121, 'VINIFANCITO', 6.0, document.getElementById('qty-121').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="122" data-name="VINIFAN ARTEZCO" data-price="10.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="VINIFAN ARTEZCO">-->
+            <h3>VINIFAN ARTEZCO</h3>
+            <p>Precio: S/10.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-122">
+            <button onclick="addToCart(122, 'VINIFAN ARTEZCO', 10.0, document.getElementById('qty-122').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="123" data-name="VINIFAN " data-price="12.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="VINIFAN ">-->
+            <h3>VINIFAN </h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-123">
+            <button onclick="addToCart(123, 'VINIFAN ', 12.0, document.getElementById('qty-123').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="124" data-name="SCKETCH BOOK X20H" data-price="18.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="SCKETCH BOOK X20H">-->
+            <h3>SCKETCH BOOK X20H</h3>
+            <p>Precio: S/18.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-124">
+            <button onclick="addToCart(124, 'SCKETCH BOOK X20H', 18.0, document.getElementById('qty-124').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="125" data-name="CARTUCHERA PORTA ORIGINAL" data-price="20.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="CARTUCHERA PORTA ORIGINAL">-->
+            <h3>CARTUCHERA PORTA ORIGINAL</h3>
+            <p>Precio: S/20.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-125">
+            <button onclick="addToCart(125, 'CARTUCHERA PORTA ORIGINAL', 20.0, document.getElementById('qty-125').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="126" data-name="CARTUCHERA PORTA IMITACION" data-price="10.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="CARTUCHERA PORTA IMITACION">-->
+            <h3>CARTUCHERA PORTA IMITACION</h3>
+            <p>Precio: S/10.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-126">
+            <button onclick="addToCart(126, 'CARTUCHERA PORTA IMITACION', 10.0, document.getElementById('qty-126').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="127" data-name="CARTUCHERA CON RELIEBE " data-price="30.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="CARTUCHERA CON RELIEBE ">-->
+            <h3>CARTUCHERA CON RELIEBE </h3>
+            <p>Precio: S/30.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-127">
+            <button onclick="addToCart(127, 'CARTUCHERA CON RELIEBE ', 30.0, document.getElementById('qty-127').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="128" data-name="CARTUCHERA PELUCHE" data-price="18.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="CARTUCHERA PELUCHE">-->
+            <h3>CARTUCHERA PELUCHE</h3>
+            <p>Precio: S/18.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-128">
+            <button onclick="addToCart(128, 'CARTUCHERA PELUCHE', 18.0, document.getElementById('qty-128').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="129" data-name="CARTUCHERA 3 CIERRES" data-price="12.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="CARTUCHERA 3 CIERRES">-->
+            <h3>CARTUCHERA 3 CIERRES</h3>
+            <p>Precio: S/12.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-129">
+            <button onclick="addToCart(129, 'CARTUCHERA 3 CIERRES', 12.0, document.getElementById('qty-129').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="130" data-name="CARTUCHERA 2 CIERRES" data-price="10.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="CARTUCHERA 2 CIERRES">-->
+            <h3>CARTUCHERA 2 CIERRES</h3>
+            <p>Precio: S/10.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-130">
+            <button onclick="addToCart(130, 'CARTUCHERA 2 CIERRES', 10.0, document.getElementById('qty-130').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="131" data-name="COQUITO DE ORO GRANDE" data-price="35.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="COQUITO DE ORO GRANDE">-->
+            <h3>COQUITO DE ORO GRANDE</h3>
+            <p>Precio: S/35.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-131">
+            <button onclick="addToCart(131, 'COQUITO DE ORO GRANDE', 35.0, document.getElementById('qty-131').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="132" data-name="DICCIONARIO ESPAÑOL PEQUEÑO" data-price="18.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="DICCIONARIO ESPAÑOL PEQUEÑO">-->
+            <h3>DICCIONARIO ESPAÑOL PEQUEÑO</h3>
+            <p>Precio: S/18.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-132">
+            <button onclick="addToCart(132, 'DICCIONARIO ESPAÑOL PEQUEÑO', 18.0, document.getElementById('qty-132').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="133" data-name="BARRA DE SILICONA DELGADA" data-price="1.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="BARRA DE SILICONA DELGADA">-->
+            <h3>BARRA DE SILICONA DELGADA</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-133">
+            <button onclick="addToCart(133, 'BARRA DE SILICONA DELGADA', 1.0, document.getElementById('qty-133').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="134" data-name="BORRADOR PEQUEÑO BLANCO" data-price="1.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="BORRADOR PEQUEÑO BLANCO">-->
+            <h3>BORRADOR PEQUEÑO BLANCO</h3>
+            <p>Precio: S/1.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-134">
+            <button onclick="addToCart(134, 'BORRADOR PEQUEÑO BLANCO', 1.0, document.getElementById('qty-134').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="135" data-name="BORRADOR GRANDE BLANCO" data-price="2.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="BORRADOR GRANDE BLANCO">-->
+            <h3>BORRADOR GRANDE BLANCO</h3>
+            <p>Precio: S/2.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-135">
+            <button onclick="addToCart(135, 'BORRADOR GRANDE BLANCO', 2.0, document.getElementById('qty-135').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="136" data-name="PLUMONES DE PAPELOTE DELGADO" data-price="3.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="PLUMONES DE PAPELOTE DELGADO">-->
+            <h3>PLUMONES DE PAPELOTE DELGADO</h3>
+            <p>Precio: S/3.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-136">
+            <button onclick="addToCart(136, 'PLUMONES DE PAPELOTE DELGADO', 3.0, document.getElementById('qty-136').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="137" data-name="PLUMONES DE PIZZARRA GRUESO" data-price="6.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="PLUMONES DE PIZZARRA GRUESO">-->
+            <h3>PLUMONES DE PIZZARRA GRUESO</h3>
+            <p>Precio: S/6.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-137">
+            <button onclick="addToCart(137, 'PLUMONES DE PIZZARRA GRUESO', 6.0, document.getElementById('qty-137').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="138" data-name="JUEGO DE REGLAS FLEXIBLE" data-price="8.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="JUEGO DE REGLAS FLEXIBLE">-->
+            <h3>JUEGO DE REGLAS FLEXIBLE</h3>
+            <p>Precio: S/8.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-138">
+            <button onclick="addToCart(138, 'JUEGO DE REGLAS FLEXIBLE', 8.0, document.getElementById('qty-138').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="139" data-name="TAJADOR DOBLE ENTRADA" data-price="5.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="TAJADOR DOBLE ENTRADA">-->
+            <h3>TAJADOR DOBLE ENTRADA</h3>
+            <p>Precio: S/5.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-139">
+            <button onclick="addToCart(139, 'TAJADOR DOBLE ENTRADA', 5.0, document.getElementById('qty-139').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="140" data-name="BALDE PLAYGO X100" data-price="30.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="BALDE PLAYGO X100">-->
+            <h3>BALDE PLAYGO X100</h3>
+            <p>Precio: S/30.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-140">
+            <button onclick="addToCart(140, 'BALDE PLAYGO X100', 30.0, document.getElementById('qty-140').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="141" data-name="ROMPECABEZAS DE ENCAJE" data-price="18.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="ROMPECABEZAS DE ENCAJE">-->
+            <h3>ROMPECABEZAS DE ENCAJE</h3>
+            <p>Precio: S/18.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-141">
+            <button onclick="addToCart(141, 'ROMPECABEZAS DE ENCAJE', 18.0, document.getElementById('qty-141').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="142" data-name="ROMPECABEZAS X20" data-price="15.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="ROMPECABEZAS X20">-->
+            <h3>ROMPECABEZAS X20</h3>
+            <p>Precio: S/15.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-142">
+            <button onclick="addToCart(142, 'ROMPECABEZAS X20', 15.0, document.getElementById('qty-142').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="143" data-name="ROMPECABEZAS X35" data-price="20.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="ROMPECABEZAS X35">-->
+            <h3>ROMPECABEZAS X35</h3>
+            <p>Precio: S/20.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-143">
+            <button onclick="addToCart(143, 'ROMPECABEZAS X35', 20.0, document.getElementById('qty-143').value)">Agregar</button>
+        </div>
+            
+        
+        <div class="product" data-id="144" data-name="ROMPECABEZAS X100" data-price="45.0" data-category="nan">
+            <!--<img src="/img/default.jpg" alt="ROMPECABEZAS X100">-->
+            <h3>ROMPECABEZAS X100</h3>
+            <p>Precio: S/45.00</p>
+            <input class="input" type="number" value="1" min="1" id="qty-144">
+            <button onclick="addToCart(144, 'ROMPECABEZAS X100', 45.0, document.getElementById('qty-144').value)">Agregar</button>
+        </div>
+    </div>
+
+    <!-- Icono del carrito fijo en la esquina superior derecha con nuevo diseño -->
+    <button id="cart-toggle" onclick="toggleCart()">🛍️</button>
+    <!-- Panel lateral del carrito -->
+    <div id="cart-container">
+      <span class="close-cart" onclick="toggleCart()">×</span>
+      <div class="cart" id="cart"></div>
+      <div class="cart-summary" id="cart-summary">
+        <h3 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Libreria "AARON"</h3>
+        <p style="color: rgb(0, 0, 0); text-align: center; font-family: 'Courier New', Courier, monospace; text-decoration: underline; line-height: 5px;">NOTA DE VENTA</p>        
+        <br>        
+        <div id="cart-details"></div>
+        <h3>Total: S/<span id="total">0.00</span></h3>
+      </div>
+      <!-- Se movió la sección de Enviar Boleta debajo del resumen -->
+      <div class="whatsapp-section">
+        <input type="text" id="whatsapp-number" placeholder="Número de WhatsApp">
+        <button onclick="sendCartAsImage()">Enviar a WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para input numérico -->
+  <div id="numeric-modal" style="display:none;">
+    <div class="modal-content">
+      <p id="modal-message">Ingrese el descuento en soles:</p>
+      <input type="number" id="modal-input" placeholder="0" autofocus>
+      <br>
+      <button id="modal-accept">Aceptar</button>
+    </div>
+  </div>
+
+<script>
+  function searchProducts() {
+    let searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    document.querySelectorAll(".product").forEach(product => {
+      let name = product.getAttribute("data-name").toLowerCase();
+      if (name.includes(searchTerm)) {
+        product.style.display = "flex";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  }
+
+  let cart = [];
+  function addToCart(id, name, price, quantity) {
+    quantity = parseInt(quantity);
+    let item = cart.find(p => p.id === id);
+    if (item) {
+      item.quantity += quantity;
+    } else {
+      cart.push({ id, name, price, quantity });
+    }
+    renderCart();
+  }
+  function removeFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    renderCart();
+  }
+  function updateQuantity(id, quantity) {
+    let item = cart.find(p => p.id === id);
+    if (item) {
+      item.quantity = Math.max(1, quantity);
+    }
+    renderCart();
+  }
+  function renderCart() {
+    const cartContainer = document.getElementById('cart');
+    const cartDetails = document.getElementById('cart-details');
+    cartContainer.innerHTML = '';
+    cartDetails.innerHTML = '';
+    let total = 0;
+    cart.forEach(item => {
+      total += item.price * item.quantity;
+      cartContainer.innerHTML += `
+        <div class="cart-item">
+          <h4>${item.name}</h4>
+          <p>Precio: S/${item.price}</p>
+          <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)">
+          <button onclick="removeFromCart(${item.id})" title="Eliminar">🗑️</button>
+          <button onclick="applyProductDiscount(${item.id})" title="Descuento">🏷️</button>
+        </div>`;
+      cartDetails.innerHTML += `<p class="parrafo">${item.quantity} x ${item.name} - S/${(item.price * item.quantity).toFixed(2)}</p>`;
+    });
+    document.getElementById('total').innerText = total.toFixed(2);
+  }
+  function getNumericInput(message) {
+    return new Promise((resolve, reject) => {
+      const modal = document.getElementById("numeric-modal");
+      const modalMessage = document.getElementById("modal-message");
+      const modalInput = document.getElementById("modal-input");
+      const modalAccept = document.getElementById("modal-accept");
+      
+      modalMessage.textContent = message;
+      modalInput.value = "";
+      modal.style.display = "flex";
+      modalInput.focus();
+      
+      modalAccept.onclick = function() {
+        let value = parseFloat(modalInput.value);
+        modal.style.display = "none";
+        resolve(value);
+      };
+    });
+  }
+  async function applyProductDiscount(id) {
+    let discount = await getNumericInput('Ingrese el descuento en soles para este producto:');
+    let item = cart.find(p => p.id === id);
+    if (item && !isNaN(discount) && discount >= 0) {
+      // Se asume que el descuento se aplica al precio unitario
+      item.price = Math.max(0, item.price - discount);
+      renderCart();
+    }
+  }
+  function toggleCart() {
+    let cartContainer = document.getElementById("cart-container");
+    cartContainer.classList.toggle("open");
+  }
+  function sendCartAsImage() {
+    let number = document.getElementById("whatsapp-number").value.trim();
+    if (!number) {
+      alert("Por favor, ingrese un número de WhatsApp.");
+      return;
+    }
+    const cartSummary = document.getElementById("cart-summary");
+    html2canvas(cartSummary).then(canvas => {
+      let image = canvas.toDataURL("image/png");
+      // Genera un nombre único usando la marca de tiempo
+      let filename = "pedido_" + new Date().getTime() + ".png";
+      let link = document.createElement("a");
+      link.href = image;
+      link.download = filename;
+      link.click();
+      setTimeout(() => {
+        let whatsappUrl = `https://wa.me/${number}?text=Pedido adjunto en imagen.`;
+        window.open(whatsappUrl, '_blank');
+      }, 1000);
+    });
+  }
+</script>
+</body>
+</html>
